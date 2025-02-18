@@ -61,6 +61,10 @@
 
 #endif  //_WIN32
 
+#ifdef __PROSPERO__
+	#define gettimeofday(_1, _2) assert(false && "gettimeofday not defined for PS5")
+#endif
+
 #define mymin(a, b) (a > b ? a : b)
 
 struct btClockData
